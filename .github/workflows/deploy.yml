@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'yans_tiles_revamp/**'
+      - '.github/workflows/**'
 
 jobs:
   deploy:
@@ -23,5 +24,5 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./yans_tiles_revamp/
-          server-dir: ./
+          server-dir: ./public_html/
           dangerous-clean-slate: false
