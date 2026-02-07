@@ -366,6 +366,7 @@ var MyScroll = "";
 
       var serviceID = "service_03r0hxr";
       var templateID = "template_iysvt2a";
+      var formLoadTime = Date.now();
 
       function showFormStatus(form, message, isError) {
         var existing = form.querySelector(".form-status");
@@ -390,6 +391,10 @@ var MyScroll = "";
 
       function handleSubmit(formEl) {
         if (!$(formEl).valid()) return;
+
+        var honeypot = formEl.querySelector('[name="website"]');
+        if (honeypot && honeypot.value) return;
+        if (Date.now() - formLoadTime < 3000) return;
 
         var submitBtn = formEl.querySelector('button[type="submit"]');
         var originalText = submitBtn.querySelector(".text").textContent;
