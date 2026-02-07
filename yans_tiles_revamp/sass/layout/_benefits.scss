@@ -1,0 +1,31 @@
+.benefit-section {
+    .benefit-block {
+        padding: clamp(20px, 1.875vw, 48px) clamp(48px, 4.375vw, 128px);
+        img{
+            width: clamp(40px, 3.33vw, 96px);
+            height: clamp(40px, 3.33vw, 96px);
+        }
+
+        &.border-line-1 {
+            border-right: 1px solid $light-gray;
+            @include media-query(899px){
+                border-right: 0;
+                border-bottom: 1px solid $light-gray;
+            }
+            @include media-query(576px){
+                border: 0;
+            }
+        }
+        
+        &.border-line-2 {
+            border-left: 1px solid $light-gray;
+            @include media-query(899px){
+                border-left: 0;
+                border-top: 1px solid $light-gray;
+            }
+            @include media-query(576px){
+                border: 0;
+            }
+        }
+    }
+}

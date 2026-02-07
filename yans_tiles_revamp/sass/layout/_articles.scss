@@ -1,0 +1,116 @@
+.article-section {
+    .article-slider {
+        .article-block {
+            width: 620px !important;
+            height: 620px !important;
+            border-radius: 50%;
+            position: relative;
+            border: 1px solid $light-gray;
+            @include media-query(1024px){
+                width: 520px !important;
+                height: 520px !important;
+            }
+            @include media-query(768px){
+                width: 420px !important;
+                height: 420px !important;
+            }
+            @include media-query(576px){
+                width: 340px !important;
+                height: 340px !important;
+            }
+    
+            img {
+                border-radius: 50%;
+                transition: $transition;
+            }
+    
+            .article-content {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                h4{
+                    transition: $transition;
+                }
+                .date {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: $gap-16;
+                    color: $light-black;
+                    transition: $transition;
+                    svg{
+                        path{
+                            transition: $transition;
+                        }
+                    }
+                }
+                .article-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: $gap-12;
+                    color: $light-black;
+                    transition: $transition;
+                    svg{
+                        path{
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+    
+            &.slick-center {
+                z-index: 999;
+                margin-left: -66px;
+            }
+            &.slick-active{
+                transform: scale(0.98);
+                img{
+                    opacity: 0;
+                }
+            }
+            &.slick-current, &:hover{
+                border: 1px solid transparent;
+                transform: scale(1);
+                img{
+                    opacity: 1;
+                }
+                .article-content {
+                    h4{
+                        color: $white;
+                        transition: $transition;
+                    }
+                    .date {
+                        transition: $transition;
+                        color: $white;
+                        svg{
+                            path{   
+                                fill: $white;
+                                transition: $transition;
+                            }
+                        }
+                    }
+                    .article-btn{
+                        color: $white;
+                        transition: $transition;
+                        svg{
+                            path{
+                                transition: $transition;
+                                fill: $white;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &[aria-hidden="false"] {
+                margin-left: -66px;
+            }
+            &[aria-hidden="true"] {
+                opacity: 0;
+            }
+        }
+    }
+}

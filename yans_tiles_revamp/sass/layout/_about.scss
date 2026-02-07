@@ -1,0 +1,487 @@
+// About Section - 1
+.about-section {
+    .skills-bar-container {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        width: 80%;
+
+        @include media-query(576px) {
+            width: 99%;
+        }
+
+        .skill-parent {
+            position: relative;
+            width: 100%;
+
+            .progressbar-title {
+                display: flex;
+                align-items: center;
+                gap: $gap-12;
+
+                .line-text {
+                    text-wrap: nowrap;
+                }
+
+                .bar-container {
+                    background: #FFF2CF;
+                    position: relative;
+                    width: 100%;
+                    height: clamp(10px, 0.833vw, 24px);
+                    border-radius: $br-4;
+                    display: flex;
+                    align-items: center;
+
+                    .progressbar {
+                        background-color: $accent-2;
+                        width: 0%;
+                        height: 100%;
+                        border-radius: $br-4;
+                        -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        -webkit-animation-timing-function: ease-out;
+                        animation-timing-function: ease-out;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+
+                    }
+
+                    #progress-cleaning {
+                        -webkit-animation-name: progress-cleaning;
+                        animation-name: progress-cleaning;
+                        -webkit-animation-delay: 0.8s*2;
+                        animation-delay: 0.8s*2;
+                    }
+
+                    #progress-build {
+                        -webkit-animation-name: progress-build;
+                        animation-name: progress-build;
+                        -webkit-animation-delay: 0.3s*2.5;
+                        animation-delay: 0.3s*2.5;
+                    }
+
+                    #progress-repairing {
+                        -webkit-animation-name: progress-repairing;
+                        animation-name: progress-repairing;
+                        -webkit-animation-delay: 0.3s*3;
+                        animation-delay: 0.3s*3;
+                    }
+                }
+
+                .percent {
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    color: $black;
+                    width: clamp(28px, 2.344vw, 54px);
+                    height: clamp(28px, 2.344vw, 54px);
+                    border-radius: 50%;
+                    margin-left: clamp(-22px, -1.25vw, 48px);
+                    margin-top: -40px;
+                }
+            }
+
+            .progressbar {
+                background-color: $accent-1;
+            }
+        }
+
+        @-webkit-keyframes progress-cleaning {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+
+        @-webkit-keyframes progress-build {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 50%;
+            }
+        }
+
+        @-webkit-keyframes progress-repairing {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+
+        @-moz-keyframes progress-cleaning {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+
+        @-moz-keyframes progress-build {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 50%;
+            }
+        }
+
+        @-moz-keyframes progress-repairing {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+
+        @keyframes progress-cleaning {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+
+        @keyframes progress-build {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 50%;
+            }
+        }
+
+        @keyframes progress-repairing {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+    }
+
+    .about-image {
+        position: relative;
+
+        img {
+            @include media-query(576px) {
+                width: 80%;
+            }
+
+            @include media-query(350px) {
+                width: 90%;
+            }
+        }
+
+        .image-text {
+            background: $accent-1;
+            border-radius: 50% 50% 0 0;
+            padding: clamp(24px, 2.5vw, 64px) clamp(16px, 1.667vw, 48px);
+            position: absolute;
+            bottom: 1px;
+            right: 0;
+
+            @include media-query(820px) {
+                padding: 36px 28px;
+            }
+
+            @include media-query(576px) {
+                padding: 32px 16px;
+                width: 35%;
+                bottom: 0;
+            }
+
+            @include media-query(350px) {
+                padding: 18px 12px;
+                width: 42%;
+            }
+
+        }
+    }
+}
+
+// About Section - 2
+.about-2-section {
+    padding: clamp(60px, 7.292vw, 220px) 0;
+
+    @include media-query(576px) {
+        height: 930px;
+    }
+
+    .image-left-box {
+        position: relative;
+
+        img {
+            border-radius: 573px 573px 0 0;
+            box-shadow: 0px 194px 54px 0px rgba(0, 0, 0, 0.00), 0px 124px 50px 0px rgba(0, 0, 0, 0.01), 0px 70px 42px 0px rgba(0, 0, 0, 0.05), 0px 31px 31px 0px rgba(0, 0, 0, 0.09), 0px 8px 17px 0px rgba(0, 0, 0, 0.10);
+
+            &:first-child {
+                width: clamp(12%, 11.927vw, 450px);
+                position: absolute;
+                left: 1.667vw;
+                bottom: -8px;
+                transform: rotate(-15deg);
+
+                @include media-query(899px) {
+                    left: 3%;
+                    bottom: -80px;
+                }
+
+                @include media-query(576px) {
+                    left: 16%;
+                    top: -64px;
+                    width: 30%;
+                    bottom: unset;
+                }
+            }
+
+            &:last-child {
+                width: clamp(20%, 17.266vw, 520px);
+                position: absolute;
+                top: -8.385vw;
+                right: 0;
+                transform: rotate(15deg);
+
+                @include media-query(899px) {
+                    top: 36px;
+                    right: unset;
+                    left: 60px;
+                }
+
+                @include media-query(576px) {
+                    left: 38%;
+                    top: -34px;
+                    width: 45%;
+                    bottom: unset;
+                }
+            }
+        }
+    }
+
+    .about-content {
+        @include media-query(576px) {
+            padding-top: 62%;
+        }
+
+        @include media-query(399px) {
+            padding-top: 70%;
+        }
+    }
+
+    .image-right-box {
+        position: relative;
+
+        img {
+            border-radius: 573px 573px 0 0;
+            box-shadow: 0px 194px 54px 0px rgba(0, 0, 0, 0.00), 0px 124px 50px 0px rgba(0, 0, 0, 0.01), 0px 70px 42px 0px rgba(0, 0, 0, 0.05), 0px 31px 31px 0px rgba(0, 0, 0, 0.09), 0px 8px 17px 0px rgba(0, 0, 0, 0.10);
+
+            &:first-child {
+                width: clamp(20%, 17.266vw, 520px);
+                position: absolute;
+                left: 1.667vw;
+                bottom: -7.083vw;
+                transform: rotate(-15deg);
+
+                @include media-query(899px) {
+                    left: unset;
+                    bottom: 52px;
+                    right: 64px;
+                }
+
+                @include media-query(576px) {
+                    bottom: -294px;
+                    right: 40%;
+                    width: 45%;
+                }
+            }
+
+            &:last-child {
+                width: clamp(12%, 13.411vw, 450px);
+                position: absolute;
+                top: -3.125vw;
+                right: 1.667vw;
+                transform: rotate(15deg);
+
+                @include media-query(899px) {
+                    top: -106px;
+                }
+                @include media-query(576px) {
+                    top: 218px;
+                    right: 20%;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+// About Page
+.about-us-page {
+    .about-image-container {
+        border-radius: 4886px $br-24 $br-24 4886px;
+        border: 2px solid $accent-1;
+        border-right: 0;
+        padding: clamp(12px, 1.25vw, 40px);
+        padding-right: 0;
+        margin-top: -2px;
+
+        img {
+            border-radius: 4886px $br-24 $br-24 4886px;
+        }
+
+        &.vr-2 {
+            border-radius: $br-24 4886px 4886px $br-24;
+            border: 2px solid $accent-1;
+            border-left: 0;
+            padding: clamp(12px, 1.25vw, 40px);
+
+            @include media-query(992px) {
+                padding-left: 0;
+            }
+
+            img {
+                border-radius: $br-24 4886px 4886px $br-24;
+            }
+        }
+    }
+
+    .about-text-container {
+        padding-left: clamp(16px, 0.833vw, 32px);
+
+        .about-icon {
+            width: clamp(48px, 3.33vw, 96px);
+            height: clamp(48px, 3.33vw, 96px);
+            background: $accent-1;
+            border-radius: $br-8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: clamp(28px, 2.083vw, 48px);
+                height: clamp(28px, 2.083vw, 48px);
+            }
+        }
+
+        &.vr-2 {
+            .about-icon {
+                margin-left: auto;
+            }
+        }
+
+        p {
+            @include media-query(1599px) {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                line-clamp: 4;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+
+.team-section {
+    .team-card {
+        padding: clamp(16px, 1.25vw, 40px);
+        border-radius: $br-16;
+
+        .image-box {
+
+            border-radius: $br-16;
+            overflow: hidden;
+
+            img {
+                border-radius: $br-16;
+                -webkit-transition: all 0.20s linear 0s;
+                transition: all 0.20s linear 0s;
+            }
+        }
+
+        .member-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: clamp(10px, 0.833vw, 24px) clamp(16px, 1.25vw, 40px);
+            border-radius: $br-12;
+            background: $white;
+
+            h6 {
+                transition: $transition;
+            }
+
+            .social-icon {
+                display: flex;
+                align-items: center;
+                gap: $gap-16;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: clamp(48px, 3.33vw, 96px);
+                    height: clamp(48px, 3.33vw, 96px);
+                    border-radius: 50%;
+                    background: $lightest-gray;
+                    transition: $transition;
+
+                    svg {
+                        width: clamp(24px, 1.667vw, 48px);
+                        height: clamp(24px, 1.667vw, 48px);
+
+                        path {
+                            transition: $transition;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $accent-1;
+                        transition: $transition;
+
+                        svg {
+                            path {
+                                fill: $white;
+                                transition: $transition;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .image-box {
+                img {
+                    -webkit-transform: scale(1.1) translateX(16px);
+                    transform: scale(1.1) translateX(16px);
+                    -webkit-transition: all 0.20s linear 0s;
+                    transition: all 0.20s linear 0s;
+                }
+            }
+
+            .member-info {
+                h6 {
+                    color: $accent-1;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}

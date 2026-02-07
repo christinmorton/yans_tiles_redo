@@ -1,0 +1,75 @@
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: #EFF6FF;
+  z-index: 9999999;
+  display: grid;
+  align-content: center;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+
+  /* common */
+  .loading {
+    font-size: 84px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding: 0 16px;
+    @include media-query(490px){
+      letter-spacing: -4px;
+    }
+
+    span {
+      display: inline-block;
+      margin: 0 -.05em;
+      font-size: clamp(28px, 4vw, 120px);
+      @include media-query(576px){
+        font-size: clamp(24px, 7vw, 48px);
+      }
+    }
+  }
+
+  .loading07 {
+    span {
+      position: relative;
+      color: rgba($accent-1, .2);
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: attr(data-text);
+        color: $accent-1;
+        opacity: 0;
+        transform: scale(1.5);
+        animation: loading07 3s infinite;
+      }
+
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i+1})::after {
+          animation-delay: #{$i*.1}s;
+        }
+      }
+    }
+  }
+
+}
+
+
+@keyframes loading07 {
+
+  0%,
+  75%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  25%,
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

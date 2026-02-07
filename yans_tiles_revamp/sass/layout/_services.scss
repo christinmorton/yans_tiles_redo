@@ -1,0 +1,111 @@
+.service-section {
+    .service-block {
+        background: #F2F1F1;
+        transition: $transition;
+        padding: clamp(12px, 1.25vw, 40px);
+        border-radius: $br-12;
+
+        .icon-box {
+            svg {
+                width: clamp(28px, 2.5vw, 64px);
+                height: clamp(28px, 2.5vw, 64px);
+
+                path {
+                    transition: $transition;
+                }
+            }
+        }
+
+        .content-box {
+
+            h5,
+            p {
+                transition: $transition;
+            }
+        }
+
+        &:hover {
+            background: $accent-1;
+            transition: $transition;
+
+            .icon-box {
+                svg {
+                    path {
+                        fill: $white;
+                        transition: $transition;
+                    }
+                }
+            }
+
+            .content-box {
+
+                h5,
+                p {
+                    color: $white;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
+
+.service-section-v2 {
+    .service-card {
+        border-radius: $br-12 $br-12 0 0;
+        .service-text {
+            padding: clamp(16px, 1.667vw, 48px) clamp(24px, 2.5vw, 64px);
+            @include media-query(576px){
+                padding-top: 32px;
+            }
+            h4{
+                color: $light-black;
+                transition: $transition;
+            }
+        }
+        
+        .image-block {
+            overflow: hidden;
+            border-radius: 0 0 $br-12 $br-12;
+            .service-icon {
+                width: clamp(54px, 5vw, 128px);
+                height: clamp(54px, 5vw, 128px);
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: $white;
+                position: relative;
+                z-index: 50;
+                margin-right: auto;
+                margin-left: auto;
+                img{
+                    width: clamp(32px, 2.5vw, 64px);
+                    height: clamp(32px, 2.5vw, 64px);
+                }
+            }
+            
+            .service-image {
+                margin-top: clamp(-24px, -2.5vw, -64px);
+                border-radius: 0 0 $br-12 $br-12;
+                -webkit-transition: all 0.35s linear 0s;
+                transition: all 0.35s linear 0s;
+            }
+        }
+        &:hover{
+            .service-text {
+                h4{
+                    color: $accent-1;
+                    transition: $transition;
+                }
+            }
+            .image-block {
+                .service-image {
+                    -webkit-transform: scale(1.1);  
+                    transform: scale(1.1);
+                    -webkit-transition: all 0.35s linear 0s;
+                    transition: all 0.35s linear 0s;
+                }
+            }
+        }
+    }
+}

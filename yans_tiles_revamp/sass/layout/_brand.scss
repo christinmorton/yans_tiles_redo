@@ -1,0 +1,65 @@
+.brand-section {
+    padding: 11.771vw 0  clamp(48px, 4.167vw, 160px) 0;
+    .brand-container {
+        display: flex;
+        align-items: center;
+        gap: $gap-24;
+        width: 100%;
+        @include media-query(576px){
+            flex-wrap: wrap;
+        }
+
+        .brand-block {
+            background: #F2F1F1;
+            border-radius: $br-12;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 16.979vw;
+            height: 7.5vw;
+            transition: $transition;
+            @include media-query(576px){
+                width: 46%;
+                height: auto;
+            }
+            &:nth-child(2){
+                margin-top: -8.021vw;
+                @include media-query(576px){
+                    margin-top: 0;
+                }
+            }
+            &:nth-child(3){
+                margin-top: -16.042vw;
+                @include media-query(576px){
+                    margin-top: 0;
+                }
+            }
+            &:nth-child(4){
+                margin-top: -8.021vw;
+                @include media-query(576px){
+                    margin-top: 0;
+                }
+            }
+            svg{
+                width: 8.542vw;
+                @include media-query(576px){
+                    width: 80px;
+                    height: 74px;
+                }
+                path{
+                    transition: $transition;
+                }
+            }
+            &:hover{
+                background: $accent-1;
+                transition: $transition;
+                svg{
+                    path{
+                        fill: $white;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+}

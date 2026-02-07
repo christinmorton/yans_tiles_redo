@@ -1,0 +1,103 @@
+.contact-page{
+    .contact-wrapper{
+        padding: clamp(20px, 1.875vw, 64px) clamp(28px, 2.5vw, 64px);
+        border-radius: $br-8;
+        form{
+            .cus-support-container{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: $gap-12;
+                .myTextBox{
+                    padding: clamp(5px, 0.417vw, 16px);
+                    border-radius: $br-4;
+                    background: $white;
+                    display: flex;
+                    align-items: center;
+                    gap: $gap-24;
+                    cursor: pointer;
+                    transition: $transition;
+                    color: $dark-gray;
+                    i{
+                        font-size: clamp(18px, 1.25vw, 32px);
+                        font-weight: 600;
+                        color: $accent-1;
+                        transition: $transition;
+                    }
+                    &:hover{
+                        background: $accent-1;
+                        transition: $transition;
+                        color: $white;
+                        i{
+                            transition: $transition;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-slider{
+        .slick-dots{
+            position: unset;
+            display: flex;
+            justify-content: center;
+            margin-top: clamp(16px, 1.25vw, 48px);
+
+            li{
+                width: clamp(12px, 0.833vw, 24px);
+                height: clamp(12px, 0.833vw, 24px);
+                border-radius: 50%;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                background-color: #D9D9D9;
+                border: 0;
+                transition: $transition;
+                margin: 0 4px;
+
+                &.slick-active{
+                    background-color: $accent-1;
+                }
+                button{
+                    padding: 0;
+                    color: $white;
+                    font-size: 0; /* 18px */
+                    visibility: hidden;
+                    &:before{
+                        color: transparent;
+                    }
+                }
+            }
+        }
+        .slide{
+            img{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: $gap-24;
+                .icon-box{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: $br-8;
+                    background: $lightest-gray;
+                    width: clamp(38px, 2.5vw, 64px);
+                    height: clamp(38px, 2.5vw, 64px);
+                    img{
+                        width: clamp(24px, 2.083vw, 60px);
+                    }
+                }
+            }
+        }
+    }
+    iframe {
+        width: 100%;
+        height: clamp(220px, 31.25vw, 800px);
+        border-radius: $br-12;
+    }
+}

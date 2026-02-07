@@ -1,0 +1,10 @@
+
+.service-detail{
+    .service-icon{
+        padding: clamp(12px, 1.875vw, 54px);
+        img{
+            width: clamp(40px, 3.33vw, 96px);
+            height: clamp(40px, 3.33vw, 96px);
+        }
+    }
+}

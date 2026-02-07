@@ -1,0 +1,13 @@
+
+.testimonial-section{
+
+    .testimonials-slider{
+        .testimonial-block{
+            width: 56.25vw;
+            background: $lightest-gray;
+            border-radius: $br-12;
+            padding: clamp(24px, 2.5vw, 64px) clamp(32px, 3.33vw, 96px);
+            margin: 0 12px;
+        }
+    }
+}

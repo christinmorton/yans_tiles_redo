@@ -1,0 +1,132 @@
+/*-------------------------
+  Form Styling
+-------------------------*/
+
+// TEXTAREA
+textarea.form-control {
+  min-height: 130px;
+  max-height: 150px;
+
+  @media(max-width: 578px) {
+    min-height: 80px;
+    max-height: 80px;
+  }
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  svg,
+  i {
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    width: clamp(18px, 1.25vw, 28px);
+    height: clamp(18px, 1.25vw, 28px);
+
+    @include media-query(1799px) {
+      top: 16px;
+    }
+
+    @include media-query(1499px) {
+      top: 14px;
+    }
+
+    @include media-query(1399px) {
+      top: 13px;
+    }
+
+    @include media-query(1024px) {
+      top: 8px;
+    }
+
+    // @include media-query(992px) {
+    //   top: 15px;
+    // }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+
+}
+
+// INPUT FIELD
+.form-control {
+  padding: 0;
+  padding-bottom: 8px;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid $light-gray;
+  background: transparent;
+  font-family: $font-primary;
+  font-size: clamp(16px, 0.938vw, 24px); /* 14px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  position: relative;
+  color: $black;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    color: $black !important;
+    background: transparent;
+  }
+
+  &::placeholder {
+    color: $light-gray;
+    opacity: 1;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+
+}
+
+// FORM VALIDATION ERROR
+label {
+  &.error {
+    color: #ff0000;
+  }
+}
+
+// CHECKBOX
+.cus-checkBox {
+  input {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 0.625vw, 24px);
+    cursor: pointer;
+
+    &::before {
+      content: '\f0c8';
+      font-family: $font-awesome;
+      color: $light-gray;
+      font-size: clamp(16px, 1.042vw, 20px);
+      font-weight: 300;
+    }
+  }
+
+  input[type="checkbox"]:checked {
+    +label {
+      color: $accent-1;
+      font-weight: 400;
+
+      &::before {
+        content: '\f14a';
+        color: $accent-1;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.booking-section {
+    overflow: hidden;
+
+    .form-wrapper {
+        padding: clamp(20px, 1.875vw, 48px) clamp(28px, 2.5vw, 64px);
+    }
+
+    .booking-info {
+        padding: clamp(16px, 1.574vw, 32px) 16px;
+
+        svg {
+            width: clamp(24px, 1.667vw, 48px);
+            height: clamp(24px, 1.667vw, 48px);
+        }
+
+        a {
+            color: $light-black;
+            transition: $transition;
+
+            &:hover {
+                color: $accent-1;
+                transition: $transition;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+# Reference theme (not part of deployed site)
+html_theme/
+
+# Scraped content from old site
+scraped_content/
+
+# Private notes with credentials
+notes.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+*.code-workspace
+
+# Node (in case tooling is added later)
+node_modules/

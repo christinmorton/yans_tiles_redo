@@ -1,0 +1,221 @@
+.hero-banner {
+    position: relative;
+    background: #EFF6FF;
+
+    .banner-wrapper {
+        padding-top: 5.654vw; 
+        position: relative;
+        @include media-query(1299px){
+            padding-top: 13%; 
+        }
+
+        @include media-query(1099px){
+            padding-top: 20%;
+        }
+
+        .arrow-image {
+            position: absolute;
+            top: 8.333vw;
+            right: 19.583vw;
+            width: 7.865vw;
+            height: 4.219vw;
+            animation: arrowAnim 5s linear infinite alternate;
+            @include media-query(1399px){
+                top: 16%;
+                right: 20%;
+            }
+            @include media-query(1099px){
+                display: none;
+            }
+            @include media-query(820px){
+                display: block;
+                top: 24%;
+                right: unset;
+                left: 8%;
+            }
+            @include media-query(576px){
+                top: 44%;
+                left: 3%;
+                width: 20%;
+                height: auto;
+            }
+
+            @keyframes arrowAnim {
+                0%{
+                    transform: rotate(0deg);
+                }
+                50%{
+                    transform: rotate(15deg);
+                }
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .circle-image {
+            position: absolute;
+            top: 139px;
+            right: 218px;
+            width: clamp(20px, 1.667vw, 64px);
+            height: clamp(20px, 1.667vw, 64px);
+            animation: circleAnim 1s linear infinite alternate;
+            transition: $transition;
+            @include media-query(1399px){
+                top: 17%;
+                right: 5%;
+            }
+            @include media-query(1099px){
+                display: none;
+            }
+            @include media-query(820px){
+                display: block;
+                top: 15%;
+                right: 50%;
+            }
+            @include media-query(576px){
+                top: 30%;
+                right: 15%;
+            }
+            @include media-query(399px){
+                top: 36%;
+            }
+
+            @keyframes circleAnim {
+                0%{
+                    transform: scale(0.7);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .banner-text {
+            padding-top: 22%;
+            @include media-query(1399px){
+                padding-top: 15%;
+            }
+            @include media-query(1099px){
+                padding-top: 5%;
+            }
+            @include media-query(820px){
+                padding-top: 50%;
+            }
+            @include media-query(576px){
+                padding-top: 15%;
+                padding-bottom: 5%;
+            }
+            h1 {
+                span {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 40px;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url('../media/vector/banner-line.png');
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        @include media-query(1099px){
+                            top: 24px;
+                        }
+                    }
+                }
+            }
+            .play-btn{
+                img{
+                    animation: circleAnim 1s linear infinite alternate;
+                    width: clamp(40px, 3.33vw, 96px);
+                    height: clamp(40px, 3.33vw, 96px);
+                }
+            }
+        }
+
+        .banner-image{
+            @include media-query(576px){
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+        .banner-form {
+            margin-left: 15%;
+            margin-top: 30%;
+            padding: clamp(24px, 1.875vw, 64px) clamp(24px, 2.5vw, 72px);
+            background: $white;
+            border-radius: $br-8;
+            border-top: 4px solid $accent-1;
+            box-shadow: 0px 472px 132px 0px rgba(0, 0, 0, 0.00), 0px 302px 121px 0px rgba(0, 0, 0, 0.01), 0px 170px 102px 0px rgba(0, 0, 0, 0.05), 0px 76px 76px 0px rgba(0, 0, 0, 0.09), 0px 19px 42px 0px rgba(0, 0, 0, 0.10);
+
+            @include media-query(1499px){
+                margin-top: 30%;
+            }
+            @include media-query(1399px){
+                margin-top: 26%;
+                margin-left: 10%;
+            }
+            @include media-query(1299px){
+                margin-top: 12%;
+            }
+            @include media-query(1099px){
+                margin-top: -16%;
+                margin-left: 0;
+            }
+            .input-wrapper {
+                overflow: hidden;
+            }
+
+            .wrapper-dropdown {
+                border-bottom: 1px solid $light-gray;
+            }
+        }
+    }
+
+    .customer-wrapper {
+        margin-top: -12.4%; /* 238px */
+        padding: clamp(40px, 3.33vw, 96px) 0;
+        background: #93C5FD;
+        @include media-query(1599px){
+            margin-top: -12.65%;
+        }
+        @include media-query(1399px){
+            margin-top: -12.7%;
+        }
+        @include media-query(1199px){
+            margin-top: -13.5%;
+        }
+        @include media-query(1099px){
+            margin-top: -14.42%;
+        }
+        @include media-query(1024px){
+            margin-top: -17.6%;
+        }
+        @include media-query(820px){
+            margin-top: -18.87%;
+        }
+        @include media-query(768px){
+            margin-top: -19.5%;
+        }
+        @include media-query(576px){
+            margin-top: 0;
+        }
+        .customer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include media-query(1199px){
+                justify-content: unset;
+                gap: $gap-64;
+            }
+            @include media-query(768px){
+                gap: $gap-32;
+            }
+        }
+    }
+}
